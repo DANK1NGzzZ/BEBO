@@ -50,10 +50,12 @@ export function App() {
       platform={['macos', 'ios'].includes(WebApp.platform) ? 'ios' : 'base'}
     >
       <BrowserRouter>
-        <BackButtonManipulator/>
+        <BackButtonManipulator />
         <Routes>
-          {routes.map((route) => <Route key={route.path} {...route} />)}
-          <Route path='*' element={<Navigate to='/'/>}/>
+          {routes.map((route) => (
+            <Route key={route.path} path={route.path} element={<route.Component />} />
+          ))}
+          <Route path='*' element={<Navigate to='/' />} />
         </Routes>
       </BrowserRouter>
     </AppRoot>

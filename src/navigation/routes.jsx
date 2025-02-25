@@ -1,4 +1,5 @@
 import { IndexPage } from '@/pages/IndexPage/IndexPage';
+import { PlayPage } from '@/pages/PlayPage/PlayPage';
 
 /**
  * @typedef {object} Route
@@ -13,4 +14,5 @@ import { IndexPage } from '@/pages/IndexPage/IndexPage';
  */
 export const routes = [
   { path: '/', Component: IndexPage },
+  { path: '/play-game', Component: PlayPage, title: 'Play Game'},
 ];
