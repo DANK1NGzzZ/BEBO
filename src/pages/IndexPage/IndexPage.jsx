@@ -40,19 +40,31 @@ export function IndexPage() {
   return (
     <>
       <ToastContainer />
-    <div style={{ backgroundColor: '', minHeight: '100vh' }}>
-    <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-    <TonConnectButton />
-    </div>
-    <div>
-    <img src={BEBO} alt="描述" style={{ width: '100%', height: '160px' }} />
-    </div>
-    <div style={{ position: 'relative' }}>
-    <img src={Play} alt="描述" style={{width: '50%', height: '100px',position: 'absolute', top: '275px', left: '95px', zIndex: 1 }} 
-      onClick={debouncedHandleClick}  />
-   <img src={TP1Image} alt="描述" style={{ maxWidth: '100%', height: 'auto' }} />
-    </div>
-    </div>
+      <div style={{ backgroundColor: '', minHeight: '100vh', padding: '10px' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <TonConnectButton />
+        </div>
+        <div>
+          <img src={BEBO} alt="描述" style={{ width: '100%', height: 'auto' }} />
+        </div>
+        <div style={{ position: 'relative', textAlign: 'center' }}>
+          <img src={TP1Image} alt="描述" style={{ maxWidth: '100%', height: 'auto' }} />
+          <img 
+            src={Play} 
+            alt="描述" 
+            style={{ 
+              position: 'absolute', 
+              width: '50%', 
+              height: 'auto', 
+              top: '50%',
+              left: '48%',
+              transform: 'translate(-50%, -50%)',
+              cursor: 'pointer' 
+            }} 
+            onClick={debouncedHandleClick} 
+          />
+        </div>
+      </div>
     </>
   );
 }
