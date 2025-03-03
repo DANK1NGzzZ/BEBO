@@ -22,7 +22,7 @@ export function IndexPage() {
     if (userFriendlyAddress == "") {
       toast.error("请连接钱包");
     } else {
-      window.location.href = `/目标页面路径?address=${userFriendlyAddress}`;
+      window.location.href = `/play-game`;
     }
   }, [userFriendlyAddress]);
 

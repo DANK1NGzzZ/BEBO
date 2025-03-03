@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
 // import basicSsl from '@vitejs/plugin-basic-ssl';
 import basicSsl from '@vitejs/plugin-basic-ssl';
+import { nodePolyfills } from 'vite-plugin-node-polyfills'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -12,8 +13,9 @@ export default defineConfig({
     react(),
     // Allows using self-signed certificates to run the dev server using HTTPS.
     // https://www.npmjs.com/package/@vitejs/plugin-basic-ssl
-    basicSsl(),
+    basicSsl()
   ],
+  
   publicDir: './public',
   server: {
     https: true, // 启用 HTTPS
@@ -23,6 +25,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(dirname(fileURLToPath(import.meta.url)), './src'),
+   
     }
   },
 });
