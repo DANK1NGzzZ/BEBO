@@ -43,7 +43,7 @@ function BackButtonManipulator() {
 export function App() {
   return (
     <TonConnectUIProvider
-    manifestUrl="https://bebo-nu.vercel.app/tonconnect-manifest.json"
+    manifestUrl="https://172.16.10.238:5173/tonconnect-manifest.json"
 >
     <AppRoot
       appearance={WebApp.colorScheme}
