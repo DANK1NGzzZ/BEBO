@@ -1,5 +1,5 @@
 import { IndexPage } from '@/pages/IndexPage/IndexPage';
-import { PlayPage } from '@/pages/PlayPage/PlayPage';
+import { PlayPage } from '@/pages/IndexPage/PlayPage';
 
 /**
  * @typedef {object} Route
@@ -13,6 +13,6 @@ import { PlayPage } from '@/pages/PlayPage/PlayPage';
  * @type {Route[]}
  */
 export const routes = [
-  { path: '/', Component: PlayPage },
+  { path: '/', Component: IndexPage },
   { path: '/playgame', Component: PlayPage},
 ];

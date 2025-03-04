@@ -254,7 +254,7 @@ export function PlayPage() {
                     </span>
         </div>
         <div style={{ fontSize: '24px', textAlign: 'center', margin: '10px 0' }}>
-            Next Time: {new Date(countdown * 1000).toLocaleString()} {/* 显示当前时间戳 */}
+            下一次: {countdown > 0 ? new Date(countdown * 1000).toLocaleString() : '0'} {/* 如果 countdown 为 0，显示 0 */}
         </div>
       </div>
     </>
