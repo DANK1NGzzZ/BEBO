@@ -43,22 +43,22 @@ function BackButtonManipulator() {
 export function App() {
   return (
     <TonConnectUIProvider
-    manifestUrl="https://172.16.10.238:5173/tonconnect-manifest.json"
->
-    <AppRoot
-      appearance={WebApp.colorScheme}
-      platform={['macos', 'ios'].includes(WebApp.platform) ? 'ios' : 'base'}
+      manifestUrl="http://172.16.10.238:5173/tonconnect-manifest.json"
     >
-      <BrowserRouter>
-        <BackButtonManipulator />
-        <Routes>
-          {routes.map((route) => (
-            <Route key={route.path} path={route.path} element={<route.Component />} />
-          ))}
-          <Route path='*' element={<Navigate to='/' />} />
-        </Routes>
-      </BrowserRouter>
-    </AppRoot>
+      <AppRoot
+        appearance={WebApp.colorScheme}
+        platform={['macos', 'ios'].includes(WebApp.platform) ? 'ios' : 'base'}
+      >
+        <BrowserRouter>
+          <BackButtonManipulator />
+          <Routes>
+            {routes.map((route) => (
+              <Route key={route.path} path={route.path} element={<route.Component />} />
+            ))}
+            <Route path='*' element={<Navigate to='/' />} />
+          </Routes>
+        </BrowserRouter>
+      </AppRoot>
     </TonConnectUIProvider>
   );
 }

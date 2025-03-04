@@ -82,6 +82,7 @@ export function PlayPage() {
         } else {
             console.error('error:', error);
             setCurrentClicks(0);
+            setCountdown(0);
         }
     }
   };
