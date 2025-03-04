@@ -14,5 +14,5 @@ import { PlayPage } from '@/pages/IndexPage/PlayPage';
  */
 export const routes = [
   { path: '/', Component: IndexPage },
-  //{ path: '/playgame', Component: PlayPage},
+  { path: '/playgame', Component: PlayPage},
 ];
