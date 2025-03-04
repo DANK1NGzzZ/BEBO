@@ -1,6 +1,8 @@
 import WebApp from '@twa-dev/sdk';
 import { AppRoot } from '@telegram-apps/telegram-ui';
 import { useEffect } from 'react';
+import { IndexPage } from '@/pages/IndexPage/IndexPage';
+import { PlayPage } from '@/pages/IndexPage/PlayPage';
 import {
   Navigate,
   Route,
@@ -52,9 +54,8 @@ export function App() {
         <BrowserRouter>
           <BackButtonManipulator />
           <Routes>
-            {routes.map((route) => (
-              <Route key={route.path} path={route.path} element={<route.Component />} />
-            ))}
+            <Route exact path="/" element={<IndexPage />} />
+            <Route path="/playgame" element={<PlayPage />} />
             <Route path='*' element={<Navigate to='/' />} />
           </Routes>
         </BrowserRouter>
