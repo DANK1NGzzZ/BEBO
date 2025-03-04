@@ -20,7 +20,7 @@ export function IndexPage() {
 
   const handleClick = useCallback(() => {
     if (userFriendlyAddress == "") {
-      toast.error("请连接钱包");
+      toast.error("Connect Your Wallet");
     } else {
       window.location.href = `/playgame`;
     }
